@@ -137,44 +137,133 @@
  ]
 }
 </script>
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/site.js" defer></script>
 </head>
 <body>
 <header class="nav"><div class="wrap">
   <a class="brand" href="./"><img src="assets/icon-192.png" alt="" width="36" height="36">Kentr</a>
-  <nav><a href="#functies">Functies</a><a href="#fiscaal">Fiscaal</a><a href="support/">Support</a></nav>
+  <nav><a href="#opzoeken">Opzoeken</a><a href="#terugvinden">Terugvinden</a><a href="#fiscaal">Fiscaal</a><a href="support/">Support</a></nav>
 </div></header>
 <main>
-<section class="hero"><div class="wrap">
-  <div>
-    <h1>Al je auto's.<br><span>Altijd bij de hand.</span></h1>
-    <p class="lead">Kentr houdt elke auto bij die je ooit hebt gehad – met kenteken of alleen merk en type. Met gegevens van de RDW, de fiscale waarde en een indicatie van de bijtelling.</p>
-    <span class="badge-soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.59 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.83-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1-1.74.9-2.75-.86.04-1.9.58-2.52 1.3-.55.64-1.04 1.67-.91 2.66.96.07 1.94-.49 2.53-1.21z"/></svg> Binnenkort in de App Store</span>
-    <div class="meta">Gratis · iPhone en iPad · Nederlands</div>
+<section class="hero"><div class="glow g1"></div><div class="glow g2"></div><div class="road" aria-hidden="true"><i></i></div>
+<div class="wrap">
+  <div class="hero-copy">
+    <span class="pill enter" style="--d:0"><span class="dot"></span> Nieuw · gratis voor iPhone en iPad</span>
+    <h1 class="enter" style="--d:1">Al je auto's.<br><span class="hl">Altijd bij de hand.</span></h1>
+    <p class="lead enter" style="--d:2">Kentr houdt elke auto bij die je ooit hebt gehad – met kenteken of alleen merk en type. Met gegevens van de RDW, de fiscale waarde en een indicatie van de bijtelling.</p>
+    <div class="cta-row enter" style="--d:3">
+      <span class="badge-soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.530 2.66-.39 6.59 1.1 8.75.73 1.05 1.59 2.23 2.73 2.19 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.83-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.32-3.5zM14.2 6.13c.6-.73 1-1.74.9-2.75-.86.04-1.9.58-2.52 1.3-.55.64-1.04 1.67-.91 2.66.96.07 1.94-.49 2.53-1.21z"/></svg> Binnenkort in de App Store</span>
+      <a class="link-more" href="#opzoeken">Bekijk hoe het werkt <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="meta enter" style="--d:4">Gratis · geen account · geen advertenties · iOS 17+</div>
   </div>
-  <div class="plates" aria-hidden="true">
-    <div class="plate p1"><div class="eu"><span class="stars">✷</span>NL</div><div class="txt"></div></div>
-    <div class="plate p2"><div class="eu"><span class="stars">✷</span>NL</div><div class="txt"></div></div>
-    <div class="plate p3"><div class="eu"><span class="stars">✷</span>NL</div><div class="txt">KENTR</div></div>
+
+  <div class="stage enter-stage" aria-hidden="true">
+    <div class="phone">
+      <div class="notch"></div>
+      <div class="screen">
+        <div class="sb"><span>9:41</span><span class="sb-i">●●● ▮</span></div>
+        <div class="app-title">Mijn auto's</div>
+        <div class="search">⌕ Merk, model, kenteken of jaar</div>
+        <div class="sec">Nu in bezit</div>
+        <div class="row" style="--i:0"><div class="th ev"></div><div><b>Tesla Model 3</b><span class="mini-plate">K-123-QR</span><small>Sinds maart 2021</small></div></div>
+        <div class="sec">Eerder</div>
+        <div class="row" style="--i:1"><div class="th"></div><div><b>Toyota Auris</b><span class="mini-plate">12-QNT-3</span><small>2012 – 2021</small></div></div>
+        <div class="row" style="--i:2"><div class="th"></div><div><b>Volkswagen Golf</b><span class="mini-plate">QK-99-NT</span><small>2004 – 2012</small></div></div>
+        <div class="row" style="--i:3"><div class="th"></div><div><b>Opel Corsa</b><span class="mini-plate unknown">? kenteken onbekend</span><small>1998 – 2004</small></div></div>
+        <div class="tabbar"><span class="on">▣</span><span>⌕</span><span>?</span><span>▤</span><span>⚙</span></div>
+      </div>
+    </div>
+    <div class="float-card fc1"><span>Catalogusprijs</span><b>€ 47.990</b></div>
+    <div class="float-card fc2"><span>Bijtelling p/m</span><b class="y">€ 790</b></div>
+    <div class="float-plate">KENTR</div>
+  </div>
+</div></section>
+
+<section class="brands" aria-label="Merken">
+  <p class="brands-title reveal-solo">Werkt met elk Nederlands kenteken – van <b>Alfa Romeo</b> tot <b>Volvo</b></p>
+  <div class="marquee-row"><div class="marquee-track">
+    <span>Volkswagen</span><span>Opel</span><span>Peugeot</span><span>Renault</span><span>Toyota</span><span>Ford</span><span>Kia</span><span>BMW</span><span>Audi</span><span>Skoda</span><span>Volvo</span><span>Tesla</span><span>Hyundai</span><span>Citroën</span>
+    <span>Volkswagen</span><span>Opel</span><span>Peugeot</span><span>Renault</span><span>Toyota</span><span>Ford</span><span>Kia</span><span>BMW</span><span>Audi</span><span>Skoda</span><span>Volvo</span><span>Tesla</span><span>Hyundai</span><span>Citroën</span>
+  </div></div>
+  <div class="marquee-row reverse"><div class="marquee-track">
+    <span>Fiat</span><span>Mercedes-Benz</span><span>Mazda</span><span>Seat</span><span>Nissan</span><span>Suzuki</span><span>Dacia</span><span>Mini</span><span>Honda</span><span>Mitsubishi</span><span>Saab</span><span>Polestar</span><span>Cupra</span><span>Lancia</span>
+    <span>Fiat</span><span>Mercedes-Benz</span><span>Mazda</span><span>Seat</span><span>Nissan</span><span>Suzuki</span><span>Dacia</span><span>Mini</span><span>Honda</span><span>Mitsubishi</span><span>Saab</span><span>Polestar</span><span>Cupra</span><span>Lancia</span>
+  </div></div>
+</section>
+
+<section id="opzoeken"><div class="wrap split">
+  <div class="section-head">
+    <span class="eyebrow-s">Opzoeken</span>
+    <h2>Kenteken in, alles eruit</h2>
+    <p class="sub">Typ een kenteken en Kentr haalt direct de gegevens op bij de RDW: merk en model, kleur, vermogen, APK, kilometerstandoordeel en terugroepacties. Met een voorbeeldfoto van het model erbij.</p>
+    <ul class="list">
+      <li>Rechtstreeks uit de open data van de RDW</li>
+      <li>Werkt ook voor auto's die je nooit hebt gehad</li>
+      <li>Met één tik toevoegen aan je auto's</li>
+    </ul>
+  </div>
+  <div class="demo lookup-demo" aria-hidden="true">
+    <div class="ld-input"><span class="ld-eu">NL</span><span class="ld-text"></span><span class="caret"></span><span class="ld-btn">⌕</span></div>
+    <div class="ld-loading"><i></i><i></i><i></i></div>
+    <div class="ld-result">
+      <div class="ld-photo"><div class="car-shape"></div><span>Voorbeeldfoto · Wikimedia Commons</span></div>
+      <div class="ld-name">Volkswagen Golf</div>
+      <dl>
+        <div class="ld-row"><dt>Bouwjaar</dt><dd>2005</dd></div>
+        <div class="ld-row"><dt>Kleur</dt><dd>Zwart</dd></div>
+        <div class="ld-row"><dt>Vermogen</dt><dd>75 kW (102 pk)</dd></div>
+        <div class="ld-row"><dt>APK geldig tot</dt><dd>14 maart 2027</dd></div>
+        <div class="ld-row"><dt>Kilometerstand</dt><dd class="ok">Logisch</dd></div>
+        <div class="ld-row"><dt>Catalogusprijs</dt><dd class="y"><span class="count" data-to="22450" data-prefix="€ "></span></dd></div>
+      </dl>
+    </div>
+  </div>
+</div></section>
+
+<section id="terugvinden" class="alt"><div class="wrap split rev">
+  <div class="demo find-demo" aria-hidden="true">
+    <div class="fd-head">Terugvinden</div>
+    <div class="fd-chips"><span>Volkswagen</span><span>Golf</span><span>Zwart</span><span>2004 – 2006</span></div>
+    <div class="fd-scan"><i></i></div>
+    <div class="fd-count"><b>0</b> auto's gevonden</div>
+    <div class="fd-list">
+      <div class="fd-item"><span class="plate-s">QK-99-NT</span><span>Golf · zwart · 2004</span></div>
+      <div class="fd-item"><span class="plate-s">31-QZT-7</span><span>Golf · zwart · 2005</span></div>
+      <div class="fd-item match"><span class="plate-s">QN-112-T</span><span>Golf · zwart · 2005</span><em class="stamp">Dit is 'm!</em></div>
+      <div class="fd-item"><span class="plate-s">7-QKR-48</span><span>Golf · zwart · 2006</span></div>
+    </div>
+  </div>
+  <div class="section-head">
+    <span class="eyebrow-s">Terugvinden</span>
+    <h2>Oud kenteken kwijt? Zoek het terug.</h2>
+    <p class="sub">Weet je nog dat het een zwarte Golf uit 2005 was? Kentr zoekt in de RDW-gegevens alle auto's die daarbij passen. Herken je de jouwe, dan koppel je hem met één tik.</p>
+    <p class="note">De RDW publiceert geen eigenaren: Kentr laat auto's zien die passen bij je omschrijving, jij herkent je eigen kenteken.</p>
   </div>
 </div></section>
 
 <section id="functies"><div class="wrap">
-  <h2>Alles over je autohistorie</h2>
-  <p class="sub">Van je eerste auto tot je huidige: één overzicht, veilig in je eigen iCloud.</p>
-  <div class="grid">
-    <div class="card"><div class="ic">🚗</div><h3>Al je auto's</h3><p>Voeg elke auto toe met kenteken, of alleen met merk, model en bouwjaar. Met foto, periode, kilometerstanden en notities.</p></div>
-    <div class="card"><div class="ic">🔎</div><h3>Kenteken opzoeken</h3><p>Vul een kenteken in en zie direct merk, model, kleur, vermogen, APK en kilometerstandoordeel van de RDW – met een voorbeeldfoto van het model.</p></div>
-    <div class="card"><div class="ic">❓</div><h3>Kenteken terugvinden</h3><p>Weet je je oude kenteken niet meer? Zoek op merk, model, kleur en bouwjaar en herken je auto in de lijst.</p></div>
-    <div class="card"><div class="ic">€</div><h3>Fiscale waarde</h3><p>Catalogusprijs, bruto BPM, datum eerste toelating (ook bij import) en CO2-uitstoot.</p></div>
-    <div class="card"><div class="ic">%</div><h3>Bijtelling</h3><p>Een indicatie van de bijtelling als auto van de zaak, inclusief het verlaagde tarief voor elektrisch en youngtimers.</p></div>
-    <div class="card"><div class="ic">🔒</div><h3>Privé en veilig</h3><p>Vergrendel met Face ID. Je gegevens synchroniseren via je eigen iCloud; Kentr heeft geen eigen server en geen account.</p></div>
+  <div class="section-head center">
+    <span class="eyebrow-s">Functies</span>
+    <h2>Alles over je autohistorie</h2>
+    <p class="sub">Van je eerste auto tot je huidige: één overzicht, veilig in je eigen iCloud.</p>
+  </div>
+  <div class="grid features">
+    <div class="card feature"><div class="ic a-drive">🚗</div><h3>Al je auto's</h3><p>Voeg elke auto toe met kenteken, of alleen met merk, model en bouwjaar. Met foto, periode, kilometerstanden en notities.</p></div>
+    <div class="card feature"><div class="ic a-scan">🔎<i class="ring"></i></div><h3>Kenteken opzoeken</h3><p>Vul een kenteken in en zie direct merk, model, kleur, vermogen, APK en kilometerstandoordeel van de RDW – met een voorbeeldfoto van het model.</p></div>
+    <div class="card feature"><div class="ic a-bounce">❓</div><h3>Kenteken terugvinden</h3><p>Weet je je oude kenteken niet meer? Zoek op merk, model, kleur en bouwjaar en herken je auto in de lijst.</p></div>
+    <div class="card feature"><div class="ic a-flip">€</div><h3>Fiscale waarde</h3><p>Catalogusprijs, bruto BPM, datum eerste toelating (ook bij import) en CO2-uitstoot.</p></div>
+    <div class="card feature"><div class="ic a-pulse">%</div><h3>Bijtelling</h3><p>Een indicatie van de bijtelling als auto van de zaak, inclusief het verlaagde tarief voor elektrisch en youngtimers.</p></div>
+    <div class="card feature"><div class="ic a-lock">🔒</div><h3>Privé en veilig</h3><p>Vergrendel met Face ID. Je gegevens synchroniseren via je eigen iCloud; Kentr heeft geen eigen server en geen account.</p></div>
   </div>
 </div></section>
 
-<section id="fiscaal" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap split">
-  <div>
+<section id="fiscaal" class="alt"><div class="wrap split">
+  <div class="section-head">
+    <span class="eyebrow-s">Fiscaal</span>
     <h2>Fiscale gegevens uit een kenteken</h2>
-    <p class="sub" style="margin-bottom:20px">De RDW registreert per auto de catalogusprijs en de bruto BPM. Kentr toont ze overzichtelijk en rekent de bijtelling voor je uit.</p>
+    <p class="sub">De RDW registreert per auto de catalogusprijs en de bruto BPM. Kentr toont ze overzichtelijk en rekent de bijtelling voor je uit.</p>
     <ul class="list">
       <li>Catalogusprijs (fiscale waarde)</li>
       <li>Bruto BPM en CO2-uitstoot</li>
@@ -182,25 +271,64 @@
       <li>Bijtelling per maand en per jaar, met de 60-maandenregel</li>
     </ul>
   </div>
-  <div class="panel" aria-label="Voorbeeld van de fiscale gegevens">
+  <div class="panel fiscal-panel" aria-label="Voorbeeld van de fiscale gegevens">
     <dl>
-      <dt>Catalogusprijs</dt><dd>€ 42.500</dd>
-      <dt>Bruto BPM</dt><dd>€ 0</dd>
-      <dt>Brandstof</dt><dd>Elektriciteit</dd>
-      <dt>Bijtelling per maand</dt><dd class="big">€ 679</dd>
-      <dt>Tarief vast t/m</dt><dd>30 april 2031</dd>
+      <div class="fp-row"><dt>Catalogusprijs</dt><dd><span class="count" data-to="42500" data-prefix="€ "></span></dd></div>
+      <div class="fp-row"><dt>Bruto BPM</dt><dd>€ 0</dd></div>
+      <div class="fp-row"><dt>Brandstof</dt><dd>Elektriciteit</dd></div>
+      <div class="fp-row"><dt>Bijtelling per maand</dt><dd class="big"><span class="count" data-to="679" data-prefix="€ "></span></dd></div>
+      <div class="fp-row"><dt>Tarief vast t/m</dt><dd>30 april 2031</dd></div>
     </dl>
-    <small>Rekenvoorbeeld: elektrische auto, eerste toelating april 2026 (18% over € 30.000, 22% daarboven). Indicatie, geen fiscaal advies.</small>
+    <div class="meter" aria-hidden="true"><i class="m18"></i><i class="m22"></i></div>
+    <div class="meter-legend"><span><i class="k18"></i>18% over € 30.000</span><span><i class="k22"></i>22% daarboven</span></div>
+    <small>Rekenvoorbeeld: elektrische auto, eerste toelating april 2026. Indicatie, geen fiscaal advies.</small>
   </div>
 </div></section>
 
-<section class="faq"><div class="wrap">
-  <h2>Veelgestelde vragen</h2>
-  <p class="sub">Meer vragen? Kijk op de <a href="support/">supportpagina</a>.</p>
+<section id="tijdlijn"><div class="wrap">
+  <div class="section-head center">
+    <span class="eyebrow-s">Overzicht</span>
+    <h2>Je autohistorie in één tijdlijn</h2>
+    <p class="sub">Hoeveel auto's had je al, welk merk kwam het vaakst terug en welke hield je het langst? Kentr zet het voor je op een rij.</p>
+  </div>
+  <div class="timeline" aria-hidden="true">
+    <svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M10 20 H990"/></svg>
+    <div class="tl-node" style="--n:0;left:6%"><span class="yr">1998</span><span class="plate-s unknown">?</span><b>Opel Corsa</b><small>6 jaar</small></div>
+    <div class="tl-node" style="--n:1;left:34%"><span class="yr">2004</span><span class="plate-s">QK-99-NT</span><b>Volkswagen Golf</b><small>8 jaar · langst</small></div>
+    <div class="tl-node" style="--n:2;left:64%"><span class="yr">2012</span><span class="plate-s">12-QNT-3</span><b>Toyota Auris</b><small>9 jaar</small></div>
+    <div class="tl-node now" style="--n:3;left:92%"><span class="yr">2021</span><span class="plate-s">K-123-QR</span><b>Tesla Model 3</b><small>nu</small></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b class="count" data-to="4"></b><span>Auto's</span></div>
+    <div class="stat"><b class="count" data-to="28"></b><span>Jaar gereden</span></div>
+    <div class="stat"><b class="count" data-to="4"></b><span>Merken</span></div>
+  </div>
+</div></section>
+
+<section class="trust alt"><div class="wrap">
+  <div class="trust-grid">
+    <div class="trust-item"><div class="t-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2M9 9v1.5M15 9v1.5M12 9v4h-1M9 16c1.7 1.3 4.3 1.3 6 0"/></svg></div><h3>Face ID</h3><p>Vergrendel de app; bij openen wordt meteen om Face ID gevraagd.</p></div>
+    <div class="trust-item"><div class="t-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 0 1-.6-9 6 6 0 0 1 11.4 1.6A3.8 3.8 0 0 1 17.2 18Z"/></svg></div><h3>Je eigen iCloud</h3><p>Synchroniseert tussen iPhone en iPad. Geen account, geen eigen server.</p></div>
+    <div class="trust-item"><div class="t-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 5 6v6c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Geen tracking</h3><p>Geen analytics, geen advertenties en geen trackers.</p></div>
+  </div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+  <div class="section-head">
+    <h2>Veelgestelde vragen</h2>
+    <p class="sub">Meer vragen? Kijk op de <a href="support/">supportpagina</a>.</p>
+  </div>
   <details><summary>Waar komen de gegevens vandaan?</summary><p>Uit de open data van de RDW (opendata.rdw.nl). Kentr haalt de gegevens rechtstreeks op; er zit geen eigen server tussen.</p></details>
   <details><summary>Kan Kentr zien welke auto's op mijn naam stonden?</summary><p>Nee. De RDW publiceert geen eigenaren. Met "Terugvinden" zoek je auto's die passen bij je omschrijving, zodat je je eigen kenteken kunt herkennen.</p></details>
   <details><summary>Klopt de bijtelling precies?</summary><p>Het is een indicatie op basis van de catalogusprijs, de datum eerste toelating en de geldende tarieven. Je werkgever of de Belastingdienst bepaalt de definitieve bijtelling.</p></details>
   <details><summary>Wat kost Kentr?</summary><p>Kentr is gratis, zonder advertenties en zonder account.</p></details>
+</div></section>
+
+<section class="cta-band"><div class="wrap cta">
+  <div class="cta-plates" aria-hidden="true"><span class="cp cp1"></span><span class="cp cp2"></span><span class="cp cp3">KENTR</span></div>
+  <h2>Elke auto die je ooit had, op één plek.</h2>
+  <p>Kentr komt binnenkort gratis naar de App Store voor iPhone en iPad.</p>
+  <span class="badge-soon light">Binnenkort in de App Store</span>
 </div></section>
 </main>
 <footer><div class="wrap">
