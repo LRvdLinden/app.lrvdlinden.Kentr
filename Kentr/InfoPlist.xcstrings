@@ -1,0 +1,20 @@
+{
+  "sourceLanguage" : "nl",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Naam onder het app-icoon",
+      "extractionState" : "manual",
+      "localizations" : {
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Kentr" } }
+      }
+    },
+    "NSFaceIDUsageDescription" : {
+      "comment" : "Reden voor Face ID",
+      "extractionState" : "manual",
+      "localizations" : {
+        "nl" : { "stringUnit" : { "state" : "translated", "value" : "Kentr gebruikt Face ID om je autogegevens te beveiligen." } }
+      }
+    }
+  },
+  "version" : "1.0"
+}
