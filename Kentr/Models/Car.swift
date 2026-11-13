@@ -26,6 +26,8 @@ final class Car {
     var notities: String = ""
 
     @Attribute(.externalStorage) var foto: Data?
+    /// Bronvermelding als de foto een automatisch gezochte voorbeeldfoto is (leeg = eigen foto).
+    var fotoBron: String = ""
 
     /// Laatst opgehaalde RDW-gegevens (JSON van RDWVehicle).
     var rdwData: Data?
@@ -119,6 +121,7 @@ struct CarDraft {
     var kmVerkoop: Int?
     var notities = ""
     var foto: Data?
+    var fotoBron = ""
     var rdw: RDWVehicle?
 
     init() {}
@@ -143,6 +146,7 @@ struct CarDraft {
         kmVerkoop = car.kmVerkoop
         notities = car.notities
         foto = car.foto
+        fotoBron = car.fotoBron
         rdw = car.rdw
     }
 
@@ -184,6 +188,7 @@ struct CarDraft {
         car.kmVerkoop = kmVerkoop
         car.notities = notities
         car.foto = foto
+        car.fotoBron = foto == nil ? "" : fotoBron
         if let rdw, Kenteken.normalize(rdw.kenteken) == Kenteken.normalize(kenteken) {
             car.setRDW(rdw)
         } else if !Kenteken.isValid(kenteken) {

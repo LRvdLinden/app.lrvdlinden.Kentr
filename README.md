@@ -7,6 +7,7 @@ Al je auto's op één plek. Kentr houdt elke auto bij die je hebt gehad – met 
 - **Taal:** Nederlands
 - **Data:** SwiftData + CloudKit (`iCloud.app.lrvdlinden.kentr`), app-vergrendeling met Face ID
 - **Bron:** [RDW Open Data](https://opendata.rdw.nl) – *Gekentekende voertuigen* (m9d7-ebf2) en *Brandstof* (8ys7-d773), geen API-sleutel nodig
+- **Foto's:** automatische voorbeeldfoto per model via Wikipedia/Wikimedia Commons API (`Services/CarPhotoService.swift`), met bronvermelding; uit te zetten in Instellingen
 - **Website:** https://kent.lrvdlinden.app (map `web/`, zelf uploaden)
 
 ## Openen

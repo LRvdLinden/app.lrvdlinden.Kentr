@@ -5,6 +5,7 @@ struct SettingsView: View {
     @AppStorage("ui.appearance") private var appearance: AppearanceSetting = .system
     @AppStorage("onboarding.done") private var onboardingDone = true
     @State private var showWhatsNew = false
+    @AppStorage("photo.autoSearch") private var autoPhoto = true
 
     var body: some View {
         NavigationStack {
@@ -25,6 +26,16 @@ struct SettingsView: View {
                     Text("Beveiliging")
                 } footer: {
                     Text("Bij openen en na terugkeer naar de app wordt om \(lock.biometryName) gevraagd.")
+                }
+
+                Section {
+                    Toggle(isOn: $autoPhoto) {
+                        Label("Zoek automatisch een voorbeeldfoto", systemImage: "photo.on.rectangle.angled")
+                    }
+                } header: {
+                    Text("Foto's")
+                } footer: {
+                    Text("Na het invoeren van een kenteken zoekt Kentr een vrije foto van hetzelfde merk en model op Wikimedia Commons, met bronvermelding. Je kunt hem altijd vervangen door een eigen foto.")
                 }
 
                 Section {
@@ -93,6 +104,7 @@ struct WhatsNewView: View {
         ("magnifyingglass", "Kenteken opzoeken", "Techniek, APK, catalogusprijs en bruto BPM rechtstreeks van de RDW."),
         ("eurosign.circle", "Bijtelling-indicatie", "Zie wat een auto als auto van de zaak ongeveer aan bijtelling kost."),
         ("questionmark.square.dashed", "Kenteken terugvinden", "Zoek op merk, model, kleur en bouwjaar en herken je oude kenteken."),
+        ("photo.on.rectangle.angled", "Automatische voorbeeldfoto", "Na het invoeren van een kenteken zoekt Kentr een foto van hetzelfde model."),
         ("faceid", "Face ID en iCloud", "Beveilig de app en houd je iPhone en iPad automatisch gelijk."),
     ]
 

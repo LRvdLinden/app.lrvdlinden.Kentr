@@ -60,9 +60,13 @@ struct LookupView: View {
 
                 if let vehicle {
                     Section {
-                        VehicleHeader(kenteken: vehicle.kenteken, title: vehicle.displayName,
-                                      subtitle: vehicle.bouwjaar.map { "Bouwjaar \($0)" })
-                            .listRowBackground(Color.clear)
+                        VStack(spacing: 14) {
+                            VehiclePhotoView(merk: vehicle.merk, model: vehicle.handelsbenaming, bouwjaar: vehicle.bouwjaar)
+                            VehicleHeader(kenteken: vehicle.kenteken, title: vehicle.displayName,
+                                          subtitle: vehicle.bouwjaar.map { "Bouwjaar \($0)" })
+                        }
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets())
                     }
                     Section {
                         Button {

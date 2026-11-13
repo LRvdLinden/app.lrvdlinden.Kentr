@@ -13,6 +13,9 @@ struct CarEditorView: View {
     @State private var photoItem: PhotosPickerItem?
     @State private var fetchedTrigger = 0
     @State private var savedTrigger = 0
+    @State private var photoLoading = false
+    @State private var photoNotFound = false
+    @AppStorage("photo.autoSearch") private var autoSearch = true
 
     private let years = Array((1950...Calendar.current.component(.year, from: .now)).reversed())
     private let acquisitionOptions = ["Nieuw gekocht", "Tweedehands gekocht", "Private lease",
@@ -54,8 +57,13 @@ struct CarEditorView: View {
                 Task {
                     if let data = try? await item.loadTransferable(type: Data.self) {
                         draft.foto = ImageTools.downscaled(data)
+                        draft.fotoBron = ""
                     }
                 }
+            }
+            .task {
+                // Toegevoegd vanuit Opzoeken/Terugvinden: direct een voorbeeldfoto zoeken.
+                if car == nil, draft.foto == nil, draft.rdw != nil, autoSearch { await findPhoto() }
             }
         }
     }
@@ -174,13 +182,33 @@ struct CarEditorView: View {
                     .frame(maxWidth: .infinity)
                     .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                     .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+                if !draft.fotoBron.isEmpty {
+                    Text("Voorbeeldfoto, niet jouw auto · \(draft.fotoBron)")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
                 Button("Foto verwijderen", role: .destructive) {
                     draft.foto = nil
+                    draft.fotoBron = ""
                     photoItem = nil
                 }
             }
             PhotosPicker(selection: $photoItem, matching: .images) {
-                Label(draft.foto == nil ? "Foto kiezen" : "Andere foto kiezen", systemImage: "photo")
+                Label("Eigen foto kiezen", systemImage: "photo")
+            }
+            Button {
+                Task { await findPhoto() }
+            } label: {
+                HStack {
+                    Label("Zoek voorbeeldfoto van dit model", systemImage: "sparkle.magnifyingglass")
+                    if photoLoading { Spacer(); ProgressView() }
+                }
+            }
+            .disabled(draft.merk.trimmingCharacters(in: .whitespaces).isEmpty || photoLoading)
+            if photoNotFound {
+                Text("Geen passende foto gevonden. Kies een eigen foto.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
             }
         }
     }
@@ -206,8 +234,23 @@ struct CarEditorView: View {
             let vehicle = try await RDWClient.shared.vehicle(kenteken: draft.kenteken)
             draft.apply(vehicle)
             fetchedTrigger += 1
+            if draft.foto == nil, autoSearch { await findPhoto() }
         } catch {
             errorText = error.localizedDescription
+        }
+    }
+
+    private func findPhoto() async {
+        photoLoading = true
+        photoNotFound = false
+        defer { photoLoading = false }
+        if let photo = await CarPhotoService.find(merk: draft.merk, model: draft.model, bouwjaar: draft.bouwjaar),
+           let data = await CarPhotoService.download(photo) {
+            draft.foto = data
+            draft.fotoBron = photo.credit
+            photoItem = nil
+        } else {
+            photoNotFound = true
         }
     }
 

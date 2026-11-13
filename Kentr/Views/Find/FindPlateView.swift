@@ -178,9 +178,13 @@ struct FindResultDetail: View {
     var body: some View {
         List {
             Section {
-                VehicleHeader(kenteken: shown.kenteken, title: shown.displayName,
-                              subtitle: shown.bouwjaar.map { "Bouwjaar \($0)" })
-                    .listRowBackground(Color.clear)
+                VStack(spacing: 14) {
+                    VehiclePhotoView(merk: shown.merk, model: shown.handelsbenaming, bouwjaar: shown.bouwjaar)
+                    VehicleHeader(kenteken: shown.kenteken, title: shown.displayName,
+                                  subtitle: shown.bouwjaar.map { "Bouwjaar \($0)" })
+                }
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets())
             }
             Section {
                 if let linkTo {

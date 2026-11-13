@@ -23,6 +23,12 @@ struct CarDetailView: View {
                             .frame(height: 200)
                             .frame(maxWidth: .infinity)
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        if !car.fotoBron.isEmpty {
+                            Text("Voorbeeldfoto, niet jouw auto · \(car.fotoBron)")
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
                     }
                     VehicleHeader(kenteken: car.kenteken, title: car.titel, subtitle: car.periodeTekst)
                 }
