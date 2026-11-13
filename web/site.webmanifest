@@ -1,8 +1,11 @@
 {
+  "id": "/",
   "name": "Kentr",
   "short_name": "Kentr",
-  "lang": "nl",
+  "description": "Al je auto's op één plek: kenteken opzoeken met RDW-gegevens, catalogusprijs, BPM en bijtelling.",
+  "lang": "nl-NL",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#071436",
   "theme_color": "#071436",
